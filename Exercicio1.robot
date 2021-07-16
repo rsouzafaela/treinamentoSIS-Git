@@ -22,13 +22,13 @@ Dicionário Completo
     Log               ${Identificação}
 
 Dicionário Unitário
-    Log To Console ${Identificação.Nome}
-    Log            ${Identificação.Nome}
-    Log            ${Identificação.Idade}
-    Log            ${Identificação.Profissão}
-    Log            ${Identificação.Naturalidade}
-    Log            ${Identificação.Nacionalidade}
-    Log            ${Identificação.Residência}
+    Log To Console    ${Identificação.Nome}
+    Log               ${Identificação.Nome}
+    Log               ${Identificação.Idade}
+    Log               ${Identificação.Profissão}
+    Log               ${Identificação.Naturalidade}
+    Log               ${Identificação.Nacionalidade}
+    Log               ${Identificação.Residência}
 
 Lista Completa
     Log To Console    ${Celular}
@@ -45,11 +45,11 @@ Lista Unitária
 Média com Dicionário
     #Usando o evaluate no dicionário consigo setar com o . e o nome
     ${Média}=         evaluate     (${Notas.B1}+${Notas.B2}+${Notas.B3})/3    
-    Log To Console    ${Média} 
-    Log               ${Média}
+    Log To Console                  ${Média} 
+    Log                             ${Média}
 
 Média com Lista
     #Usando o evaluate na lista só consigo setar pela posição
     ${Média2}=        evaluate     (${Notas2[0]}+${Notas2[1]}+${Notas2[2]})/3
-    Log To Console    ${Média2}
+    Log To Console                  ${Média2}
 
