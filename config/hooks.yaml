@@ -1,0 +1,4 @@
+config:
+  browser: Chrome
+  url: http://automationpractice.com/index.php
+  timeout: 30

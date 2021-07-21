@@ -1,275 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210716 21:13:17.747" rpa="false" schemaversion="2">
-<suite id="s1" name="EstruturaIF" source="C:\treinamentoSIS\treinamentoSIS-Git\EstruturaIF.robot">
-<test id="s1-t1" name="Validar o numero da lista">
-<kw name="Create List" library="BuiltIn">
-<var>@{listanum2}</var>
-<arg>1</arg>
-<arg>2</arg>
-<arg>3</arg>
-<arg>4</arg>
-<arg>5</arg>
-<arg>6</arg>
-<arg>7</arg>
-<arg>8</arg>
-<arg>9</arg>
-<arg>10</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20210716 21:13:17.785" level="INFO">@{listanum2} = [ 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 ]</msg>
-<status status="PASS" starttime="20210716 21:13:17.785" endtime="20210716 21:13:17.786"/>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210720 23:01:07.378" rpa="false" schemaversion="2">
+<suite id="s1" name="Automationpractice" source="C:\treinamentoSIS\treinamentoSIS-Git\automationpractice.robot">
+<test id="s1-t1" name="Cenário: Login">
+<kw name="Open Session" library="hooks" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${config.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210720 23:01:07.540" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210720 23:01:07.538" endtime="20210720 23:01:08.808"/>
 </kw>
-<kw name="Validar um numero">
-<arg>@{listanum2}</arg>
-<for flavor="IN">
-<var>${count2}</var>
-<value>@{listanum2}</value>
-<iter>
-<var name="${count2}">1</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.789" endtime="20210716 21:13:17.789"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210720 23:01:08.809" endtime="20210720 23:01:08.938"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.789" endtime="20210716 21:13:17.789"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.789" endtime="20210716 21:13:17.789"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${config.url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210720 23:01:08.939" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210720 23:01:08.938" endtime="20210720 23:01:14.160"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.789" endtime="20210716 21:13:17.789"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.789" endtime="20210716 21:13:17.790"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.789" endtime="20210716 21:13:17.790"/>
-</iter>
-<iter>
-<var name="${count2}">2</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.790" endtime="20210716 21:13:17.790"/>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${config.timeout}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20210720 23:01:14.161" endtime="20210720 23:01:14.165"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.790" endtime="20210716 21:13:17.791"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.791" endtime="20210716 21:13:17.792"/>
+<status status="PASS" starttime="20210720 23:01:07.538" endtime="20210720 23:01:14.165"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.791" endtime="20210716 21:13:17.792"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.790" endtime="20210716 21:13:17.792"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.790" endtime="20210716 21:13:17.792"/>
-</iter>
-<iter>
-<var name="${count2}">3</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.793" endtime="20210716 21:13:17.793"/>
+<kw name="Dado que eu esteja na tela inicial" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inicio.btn_signin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:14.166" endtime="20210720 23:01:14.200"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.793" endtime="20210716 21:13:17.793"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.793" endtime="20210716 21:13:17.793"/>
+<status status="PASS" starttime="20210720 23:01:14.166" endtime="20210720 23:01:14.200"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.793" endtime="20210716 21:13:17.793"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.792" endtime="20210716 21:13:17.793"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.792" endtime="20210716 21:13:17.794"/>
-</iter>
-<iter>
-<var name="${count2}">4</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.795" endtime="20210716 21:13:17.795"/>
+<kw name="E clico em Sign in" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${inicio.btn_signin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:14.202" level="INFO">Clicking element 'xpath://a[@class='login']'.</msg>
+<status status="PASS" starttime="20210720 23:01:14.201" endtime="20210720 23:01:15.858"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.794" endtime="20210716 21:13:17.795"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.795" endtime="20210716 21:13:17.795"/>
+<status status="PASS" starttime="20210720 23:01:14.201" endtime="20210720 23:01:15.859"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.795" endtime="20210716 21:13:17.795"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.794" endtime="20210716 21:13:17.795"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.794" endtime="20210716 21:13:17.795"/>
-</iter>
-<iter>
-<var name="${count2}">5</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210716 21:13:17.796" endtime="20210716 21:13:17.797"/>
+<kw name=" Quando insiro um email válido" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inicio.email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:15.860" endtime="20210720 23:01:15.894"/>
 </kw>
-<status status="PASS" starttime="20210716 21:13:17.795" endtime="20210716 21:13:17.797"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.797" endtime="20210716 21:13:17.797"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inicio.email}</arg>
+<arg>${dados_cadastrais.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:15.897" level="INFO">Typing text 'tijase544dsssnd2@dmsdmg.com' into text field 'id:email_create'.</msg>
+<status status="PASS" starttime="20210720 23:01:15.894" endtime="20210720 23:01:15.998"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.797" endtime="20210716 21:13:17.797"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.795" endtime="20210716 21:13:17.797"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.795" endtime="20210716 21:13:17.797"/>
-</iter>
-<iter>
-<var name="${count2}">6</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.798"/>
+<status status="PASS" starttime="20210720 23:01:15.859" endtime="20210720 23:01:15.998"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.798"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.798"/>
+<kw name=" E clico em Create an account" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${inicio.btn_criar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:16.001" level="INFO">Clicking button 'xpath://button[@class="btn btn-default button button-medium exclusive"]'.</msg>
+<status status="PASS" starttime="20210720 23:01:16.000" endtime="20210720 23:01:16.069"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.798"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.798"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.798"/>
-</iter>
-<iter>
-<var name="${count2}">7</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.799"/>
+<status status="PASS" starttime="20210720 23:01:15.999" endtime="20210720 23:01:16.070"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.799"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.799"/>
+<kw name=" Então o sistema é direcionado para a tela de cadastro" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inicio.sra}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:16.071" endtime="20210720 23:01:17.621"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.799"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.799"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.798" endtime="20210716 21:13:17.799"/>
-</iter>
-<iter>
-<var name="${count2}">8</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.800" endtime="20210716 21:13:17.800"/>
+<status status="PASS" starttime="20210720 23:01:16.071" endtime="20210720 23:01:17.621"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.800"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210716 21:13:17.800" endtime="20210716 21:13:17.801"/>
+<kw name="Close Session" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210720 23:01:17.880" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210720 23:01:17.622" endtime="20210720 23:01:17.880"/>
 </kw>
-<status status="PASS" starttime="20210716 21:13:17.800" endtime="20210716 21:13:17.801"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.801"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.799" endtime="20210716 21:13:17.801"/>
-</iter>
-<iter>
-<var name="${count2}">9</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.802" endtime="20210716 21:13:17.802"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210720 23:01:17.880" endtime="20210720 23:01:20.137"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.802" endtime="20210716 21:13:17.802"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.802" endtime="20210716 21:13:17.802"/>
+<status status="PASS" starttime="20210720 23:01:17.621" endtime="20210720 23:01:20.137"/>
 </kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.802" endtime="20210716 21:13:17.802"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.801" endtime="20210716 21:13:17.802"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.801" endtime="20210716 21:13:17.802"/>
-</iter>
-<iter>
-<var name="${count2}">10</var>
-<if>
-<branch type="IF" condition="&quot;${count2}&quot; == &quot;5&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.803" endtime="20210716 21:13:17.803"/>
-</kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.803" endtime="20210716 21:13:17.803"/>
-</branch>
-<branch type="ELSE IF" condition="&quot;${count2}&quot; == &quot;8&quot;">
-<kw name="Log To Console" library="BuiltIn">
-<arg>Estou no número ${count2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20210716 21:13:17.803" endtime="20210716 21:13:17.803"/>
-</kw>
-<status status="NOT RUN" starttime="20210716 21:13:17.803" endtime="20210716 21:13:17.803"/>
-</branch>
-<status status="PASS" starttime="20210716 21:13:17.803" endtime="20210716 21:13:17.803"/>
-</if>
-<status status="PASS" starttime="20210716 21:13:17.802" endtime="20210716 21:13:17.803"/>
-</iter>
-<status status="PASS" starttime="20210716 21:13:17.788" endtime="20210716 21:13:17.803"/>
-</for>
-<status status="PASS" starttime="20210716 21:13:17.787" endtime="20210716 21:13:17.804"/>
-</kw>
-<status status="PASS" starttime="20210716 21:13:17.783" endtime="20210716 21:13:17.805"/>
+<status status="PASS" starttime="20210720 23:01:07.537" endtime="20210720 23:01:20.137"/>
 </test>
-<doc>Usando o IF</doc>
-<status status="PASS" starttime="20210716 21:13:17.749" endtime="20210716 21:13:17.808"/>
+<test id="s1-t2" name="Cenário: Cadastro">
+<kw name="Open Session" library="hooks" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${config.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210720 23:01:20.146" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210720 23:01:20.145" endtime="20210720 23:01:21.365"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210720 23:01:21.365" endtime="20210720 23:01:21.496"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${config.url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210720 23:01:21.500" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210720 23:01:21.496" endtime="20210720 23:01:26.346"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${config.timeout}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20210720 23:01:26.346" endtime="20210720 23:01:26.349"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:20.144" endtime="20210720 23:01:26.349"/>
+</kw>
+<kw name="Dado que eu esteja na tela de cadastro" library="keywords">
+<kw name="Dado que eu esteja na tela inicial" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inicio.btn_signin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:26.351" endtime="20210720 23:01:26.384"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:26.351" endtime="20210720 23:01:26.384"/>
+</kw>
+<kw name="E clico em Sign in" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${inicio.btn_signin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:26.386" level="INFO">Clicking element 'xpath://a[@class='login']'.</msg>
+<status status="PASS" starttime="20210720 23:01:26.385" endtime="20210720 23:01:28.544"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:26.384" endtime="20210720 23:01:28.544"/>
+</kw>
+<kw name=" Quando insiro um email válido" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inicio.email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:28.545" endtime="20210720 23:01:28.575"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inicio.email}</arg>
+<arg>${dados_cadastrais.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:28.576" level="INFO">Typing text 'tijase544dsssnd2@dmsdmg.com' into text field 'id:email_create'.</msg>
+<status status="PASS" starttime="20210720 23:01:28.575" endtime="20210720 23:01:28.680"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:28.545" endtime="20210720 23:01:28.680"/>
+</kw>
+<kw name=" E clico em Create an account" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${inicio.btn_criar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:28.682" level="INFO">Clicking button 'xpath://button[@class="btn btn-default button button-medium exclusive"]'.</msg>
+<status status="PASS" starttime="20210720 23:01:28.681" endtime="20210720 23:01:28.750"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:28.680" endtime="20210720 23:01:28.750"/>
+</kw>
+<kw name=" Então o sistema é direcionado para a tela de cadastro" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${inicio.sra}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:28.750" endtime="20210720 23:01:30.096"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:28.750" endtime="20210720 23:01:30.097"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:26.350" endtime="20210720 23:01:30.097"/>
+</kw>
+<kw name="Quando insiro os dados solicitados" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${inicio.sra}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:30.099" level="INFO">Clicking element 'id:id_gender2'.</msg>
+<status status="PASS" starttime="20210720 23:01:30.098" endtime="20210720 23:01:30.163"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.nome}</arg>
+<arg>${dados_cadastrais.nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:30.164" level="INFO">Typing text 'Rafaela' into text field 'id:customer_firstname'.</msg>
+<status status="PASS" starttime="20210720 23:01:30.163" endtime="20210720 23:01:30.309"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.sobrenome}</arg>
+<arg>${dados_cadastrais.sobrenome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:30.313" level="INFO">Typing text 'Souza' into text field 'id:customer_lastname'.</msg>
+<status status="PASS" starttime="20210720 23:01:30.309" endtime="20210720 23:01:30.409"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.senha}</arg>
+<arg>${dados_cadastrais.senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:30.411" level="INFO">Typing text 'Teste123' into text field 'id:passwd'.</msg>
+<status status="PASS" starttime="20210720 23:01:30.409" endtime="20210720 23:01:30.545"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${formulario.dia}</arg>
+<arg>${dados_cadastrais.dia}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210720 23:01:30.548" level="INFO">Selecting options from selection list 'id:days' by value 30.</msg>
+<status status="PASS" starttime="20210720 23:01:30.546" endtime="20210720 23:01:30.627"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${formulario.mes}</arg>
+<arg>${dados_cadastrais.mes}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210720 23:01:30.630" level="INFO">Selecting options from selection list 'id:months' by value 10.</msg>
+<status status="PASS" starttime="20210720 23:01:30.627" endtime="20210720 23:01:30.748"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${formulario.ano}</arg>
+<arg>${dados_cadastrais.ano}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210720 23:01:30.749" level="INFO">Selecting options from selection list 'id:years' by value 1996.</msg>
+<status status="PASS" starttime="20210720 23:01:30.748" endtime="20210720 23:01:30.820"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.endereço}</arg>
+<arg>${dados_cadastrais.endereço}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:30.823" level="INFO">Typing text 'Rua bla bla bla' into text field 'id:address1'.</msg>
+<status status="PASS" starttime="20210720 23:01:30.820" endtime="20210720 23:01:30.930"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.cidade}</arg>
+<arg>${dados_cadastrais.cidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:30.933" level="INFO">Typing text 'BleBle' into text field 'id:city'.</msg>
+<status status="PASS" starttime="20210720 23:01:30.931" endtime="20210720 23:01:31.026"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${formulario.estado}</arg>
+<arg>${dados_cadastrais.estado}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210720 23:01:31.030" level="INFO">Selecting options from selection list 'id:id_state' by value 16.</msg>
+<status status="PASS" starttime="20210720 23:01:31.026" endtime="20210720 23:01:31.101"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.codigo_postal}</arg>
+<arg>${dados_cadastrais.codigo_postal}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:31.103" level="INFO">Typing text '55886' into text field 'id:postcode'.</msg>
+<status status="PASS" starttime="20210720 23:01:31.101" endtime="20210720 23:01:31.187"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${formulario.pais}</arg>
+<arg>${dados_cadastrais.pais}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210720 23:01:31.190" level="INFO">Selecting options from selection list 'id:id_country' by value 21.</msg>
+<status status="PASS" starttime="20210720 23:01:31.188" endtime="20210720 23:01:31.230"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${formulario.celular}</arg>
+<arg>${dados_cadastrais.celular}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:31.231" level="INFO">Typing text '11225885' into text field 'id:phone_mobile'.</msg>
+<status status="PASS" starttime="20210720 23:01:31.230" endtime="20210720 23:01:31.322"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:30.098" endtime="20210720 23:01:31.322"/>
+</kw>
+<kw name="E clico no botão registrar" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_fim}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:31.323" level="INFO">Clicking button 'id:submitAccount'.</msg>
+<status status="PASS" starttime="20210720 23:01:31.323" endtime="20210720 23:01:32.668"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:31.323" endtime="20210720 23:01:32.668"/>
+</kw>
+<kw name="Então o cadastro é criado com sucesso" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mensagem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210720 23:01:32.670" endtime="20210720 23:01:32.699"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${mensagem_atual}</var>
+<arg>${mensagem}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210720 23:01:32.721" level="INFO">${mensagem_atual} = Welcome to your account. Here you can manage all of your personal information and orders.</msg>
+<status status="PASS" starttime="20210720 23:01:32.699" endtime="20210720 23:01:32.721"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${mensagem_atual}</arg>
+<arg>Welcome to your account. Here you can manage all of your personal information and orders.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210720 23:01:32.721" endtime="20210720 23:01:32.722"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${msg}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210720 23:01:32.734" level="INFO">Current page contains text 'Welcome to your account. Here you can manage all of your personal information and orders.'.</msg>
+<status status="PASS" starttime="20210720 23:01:32.722" endtime="20210720 23:01:32.735"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:32.669" endtime="20210720 23:01:32.735"/>
+</kw>
+<kw name="Close Session" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210720 23:01:32.943" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210720 23:01:32.736" endtime="20210720 23:01:32.943"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210720 23:01:32.943" endtime="20210720 23:01:35.189"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:32.735" endtime="20210720 23:01:35.190"/>
+</kw>
+<status status="PASS" starttime="20210720 23:01:20.142" endtime="20210720 23:01:35.190"/>
+</test>
+<doc>Prática de automação com ROBOT</doc>
+<status status="PASS" starttime="20210720 23:01:07.379" endtime="20210720 23:01:35.194"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="EstruturaIF">EstruturaIF</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Automationpractice">Automationpractice</stat>
 </suite>
 </statistics>
 <errors>
