@@ -8,6 +8,13 @@ Test Teardown    Close Session
 *** Test Cases ***
 Cenário: Login com Sucesso
     Dado que o cliente esteja na tela inicial da aplicação
-    E acesse a tela de login
-    Quando realizar login com sucesso
+    E acessar a tela de login
+    Quando inserir os dados de login    ${DADOS_CADASTRAIS.EMAIL}   ${DADOS_CADASTRAIS.PASSWD}
     Então o sistema é direcionado para a tela de cadastro
+
+Cenário: Login sem Sucesso
+    Dado que o cliente esteja na tela inicial da aplicação
+    E acessar a tela de login
+    Quando inserir os dados de login    ${DADOS_CADASTRAIS.EMAIL}   ${DADOS_CADASTRAIS.PASSWD2}
+    Então uma mensagem de erro é exibida
+    
