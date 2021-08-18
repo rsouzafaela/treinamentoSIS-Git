@@ -13,11 +13,13 @@ Library      SeleniumLibrary
 Resource    ../auto/elements/home_ets.resource
 Resource    ../auto/elements/login_ets.resource
 Resource    ../auto/elements/my_account_ets.resource
+Resource    ../auto/elements/login_erro_ets.resource
 
 #Keywords
 Resource    ../auto/keywords/home_kws.robot
 Resource    ../auto/keywords/login_kws.robot
 Resource    ../auto/keywords/my_account_kws.robot
+Resource    ../auto/keywords/login_erro_kws.robot
 
 #Config
 Variables   hooks.yaml
